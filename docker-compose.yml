@@ -9,3 +9,13 @@ services:
             - 8000:8000
         volumes:
             - .:/app
+        depends_on:
+            - db
+    db:
+        env_file: '.env'
+        restart: always
+        image: postgres:alpine
+        volumes:
+            - .dbdata:/var/lib/postgresql/data
+        ports:
+            - 5432:5432
