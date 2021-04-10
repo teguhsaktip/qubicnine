@@ -1,3 +1,4 @@
+import os
 """
 Django settings for qubicnine project.
 
@@ -23,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '-4ie6ey!rs7s=5j0ww*52o&!np%i)0k=%)#9xk8ikm8tv8yg(s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', False))
 
 ALLOWED_HOSTS = ['*']
 
