@@ -61,6 +61,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'qubicnine.wsgi.application'
 
+# USER MODEL
+AUTH_USER_MODEL = 'authentications.User'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
